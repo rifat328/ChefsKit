@@ -1,0 +1,23 @@
+.root {
+    margin: 0px;
+    padding: 0%;
+}
+
+.header-component {
+    width: 100vw;
+    height: 10vh;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10),
+        0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+
+}
+
+.header-component img {
+    align-items: center;
+    scale: 1.8;
+    position: sticky;
+
+}
