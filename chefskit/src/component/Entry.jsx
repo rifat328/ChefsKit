@@ -1,9 +1,12 @@
 import React from "react";
 import "../styling/entry.css";
 const Entry = () => {
+  const ingredients = ["chicken", "oregano", "Tomatoes"];
+  const ingredientList = ingredients.map((ingredient) => <li>{ingredient}</li>);
+  const submitOutput = () => console.log("input is submitted");
   return (
     <main>
-      <form className="add-ingredient-form">
+      <form className="add-ingredient-form" onSubmit={submitOutput}>
         <input
           type="text"
           placeholder="e.g chicken"
@@ -11,6 +14,7 @@ const Entry = () => {
         />
         <button>Add ingredient</button>
       </form>
+      <ul>{ingredientList}</ul>
     </main>
   );
 };
