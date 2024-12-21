@@ -23,4 +23,4 @@ dist-ssr
 *.sln
 *.sw?
 
-API_KEY.env
+API_AI_KEY.env
