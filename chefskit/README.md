@@ -73,8 +73,8 @@ This project uses the **Hugging Face Inference API** to suggest recipes based on
 
 ## Project Screen Shoot
 
-![Recipe Example](./ai-generated-response-1.png "A Simple Recipe")
-![Recipe Example 2](./ai-generated-response-2.png "A Simple Recipe")
+![Recipe Example](/images/ai-generated-response-1.png "A Simple Recipe")
+![Recipe Example 2](images/ai-generated-response-2.png "A Simple Recipe")
 
 ## Error Handling
 
