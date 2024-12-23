@@ -1,8 +1,6 @@
-# ChefsKit
+# Chefs Kit : Hungry ? just Generate A Recipe
 
 ChefsKit is an online AI Bot that can suggest recipe based on the ingredients someone has right now
-
-# Chefs Kit : Hungry ? just Generate A Recipe
 
 This project uses the **Hugging Face Inference API** to suggest recipes based on a list of ingredients provided by the user. It leverages the `Mistral-8x7B-Instruct` model to generate responses formatted in markdown for easy rendering.
 
