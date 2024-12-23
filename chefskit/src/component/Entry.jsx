@@ -18,7 +18,7 @@ const Entry = () => {
   };
   async function getRecipe() {
     const recipeMarkdown = await getRecipeFromMistral(ingredients);
-    console.log(recipeMarkdown);
+    setRecipe(recipeMarkdown);
   }
   //action={handleSubmit} setRecipeShown((prevValue) => !prevValue);
   return (
@@ -35,7 +35,7 @@ const Entry = () => {
       {ingredients.length > 0 && (
         <IngredientList getRecipe={getRecipe} ingredients={ingredients} />
       )}
-      {recipe && <HuggingFaceRecipe />}
+      {recipe && <HuggingFaceRecipe recipe={recipe} />}
     </main>
   );
 };
