@@ -6,7 +6,13 @@ import { getRecipeFromMistral } from "../ai";
 const Entry = () => {
   const [ingredients, setIngredient] = React.useState([]);
   const [recipe, setRecipe] = React.useState("");
+  const recipeSection = React.useRef(null);
 
+  React.useEffect(() => {
+    if (recipe !== "" && recipeSection.current !== null) {
+      recipeSection.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [recipe]);
   const handleSubmit = (event) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
@@ -20,7 +26,7 @@ const Entry = () => {
     const recipeMarkdown = await getRecipeFromMistral(ingredients);
     setRecipe(recipeMarkdown);
   }
-  //action={handleSubmit} setRecipeShown((prevValue) => !prevValue);
+  //action={handleSubmit} setRecipeShown((prevValue) => !prevValue); react v-19
   return (
     <main>
       <form className="add-ingredient-form" onSubmit={handleSubmit}>
@@ -33,7 +39,11 @@ const Entry = () => {
         <button>Add ingredient</button>
       </form>
       {ingredients.length > 0 && (
-        <IngredientList getRecipe={getRecipe} ingredients={ingredients} />
+        <IngredientList
+          ref={recipeSection}
+          getRecipe={getRecipe}
+          ingredients={ingredients}
+        />
       )}
       {recipe && <HuggingFaceRecipe recipe={recipe} />}
     </main>
