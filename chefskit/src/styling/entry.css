@@ -1,5 +1,7 @@
 main {
     padding: 1.875 1.875 0.625;
+    margin-inline: clamp(5rem, 10rem, 20rem);
+    padding-inline: clamp(5rem, 10rem, 20rem)
 }
 
 .add-ingredient-form {

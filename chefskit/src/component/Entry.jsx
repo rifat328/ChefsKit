@@ -10,7 +10,13 @@ const Entry = () => {
 
   React.useEffect(() => {
     if (recipe !== "" && recipeSection.current !== null) {
-      recipeSection.current.scrollIntoView({ behavior: "smooth" });
+      // recipeSection.current.scrollIntoView({ behavior: "smooth" });
+      const yCoord =
+        recipeSection.current.getBoundingClientRect().top + window.scrollY;
+      window.scroll({
+        top: yCoord,
+        behavior: "smooth",
+      });
     }
   }, [recipe]);
   const handleSubmit = (event) => {
